@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<!--
+  This Tumblr theme license follows Apache License 2.0 unless specified
+  as separate notes.
+
+  The license of this theme does not affect the license or copyright
+  of the contents where the theme is applied.
+
+  ====
+  Copyright 2013 sudo halt
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  ====
+
+  Default background image is downloaded from http://webtreats.mysitemyway.com/
+  and is licensed under terms shown in
+  http://webtreats.mysitemyway.com/terms-of-use/
+
+  Archive icon and RSS icon are created by sudo halt, and its license
+  follows the same license as the Tumblr theme.
+
+  Permalink icon (chain icon) is downloaded from
+  http://www.iconfinder.com/icondetails/62913/40/chain_link_seo_tags_icon
+  and resized
+
+  Tag icon is downloaded from
+  http://www.iconfinder.com/icondetails/42365/16/tag_icon
+
+  Google+ icon is downloaded from
+  http://www.iconfinder.com/icondetails/107104/16/black_google_square_icon
+
+  Facebook icon is downloaded from
+  http://findicons.com/icon/456584/facebook_alt?id=456747#
+  and resized to 16x16
+
+  Twitter icon is downloaded from its official logo site, recolored and resized.
+  https://twitter.com/logo
+-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{Title}{block:PostTitle} - {PostTitle}{/block:PostTitle}</title>
+    <link rel="shortcut icon" href="{Favicon}" />
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+    {block:Description}
+      <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+
+    <meta name="if:Show Google Plus Link" content="1" />
+    <meta name="if:Show Facebook Link" content="1" />
+    <meta name="if:Show Twitter Link" content="1" />
+
+    <meta name="text:BackgroundImageURL" content="" />
+    <meta name="text:Profile" content="" />
+    <meta name="text:Disclaimer" content="" />
+    <meta name="text:GooglePlusId" content="" />
+    <meta name="text:FacebookId" content="" />
+    <meta name="text:TwitterAccount" content="" />
+    <meta name="text:TagList" content="タグ一覧" />
+    <meta name="text:RecentPosts" content="最近の投稿" />
+
+    <meta name="color:BodyTextColor" content="#000" />
+    <meta name="color:SeparatorColor" content="#333" />
+
+    <style type="text/css">
+
+/* Google Web font */
+@font-face {
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Special Elite'), local('SpecialElite-Regular'), url(http://themes.googleusercontent.com/static/fonts/specialelite/v3/9-wW4zu3WNoD5Fjka35Jm_n8qdNnd5eCmWXua5W-n7c.woff) format('woff');
+}
+
+/* Google Web font */
+@font-face {
+  font-family: 'Happy Monkey';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Happy Monkey'), local('HappyMonkey-Regular'), url(http://themes.googleusercontent.com/static/fonts/happymonkey/v2/c2o0ps8nkBmaOYctqBq1rXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  background-color: #ccc;
+  color: {color:BodyTextColor};
+  background-image: url('{text:BackgroundImageURL}');
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  font-size: 48px;
+  line-height: 50px;
+  font-weight: 700;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 a {
+  color: #000;
+  text-decoration: none;
+  border: none;
+}
+
+a {
+  color: #555;
+}
+
+a.noline {
+  text-decoration: none;
+}
+
+img {
+  border: none;
+}
+
+blockquote {
+  -moz-margin-start: 20px;
+  -webkit-margin-start: 20px;
+  margin: 20px 0;
+  width: 100%;
+  float: left;
+}
+
+blockquote:before {
+  color: #ccc;
+  display: block;
+  position: relative;
+  float: left;
+  font-family: 'Special Elite', sans-serif;
+  font-size: 130px;
+  line-height: 50px;
+
+  content: "\0201c";
+  top: 40px;
+}
+
+blockquote+p {
+  clear: both;
+}
+
+.title-font {
+  font-family: 'Special Elite', cursive;
+}
+
+#main-container {
+  width:  85%;
+  min-width: 850px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  -webkit-box-shadow:  0px 0px 10px 10px rgba(192, 192, 192, 0.4);
+  box-shadow:  0px 0px 10px 10px rgba(64, 64, 64, 0.4);
+}
+
+#header, #main-contents-container {
+  padding: 16px;
+}
+
+.separator {
+  background-color: {color:SeparatorColor};
+  height: 25px;
+}
+
+.prevnext {
+  float: left;
+  line-height: 24px;
+  padding-left: 20px;
+  color: #666;
+  font-size: 12px;
+}
+
+.prevnext span.prevnext-separator {
+  color: #ccc;
+  font-size: 14px;
+}
+
+#theme-credit {
+  float: right;
+  color: #666;
+  font-size: 13px;
+  line-height: 24px;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.prevnext a, #theme-credit a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.prevnext a {
+  font-size: 14px;
+}
+
+#theme-credit a {
+  font-size: 15px;
+}
+
+.post-separator {
+  height: 4px;
+  margin: 15px 0;
+}
+
+.italic {
+  font-style: italic;
+}
+
+#main-contents {
+  display: table;
+  width: 100%;
+}
+
+#posts {
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 8px;
+  border-right: dashed 2px #888;
+}
+
+.single-post {
+  display: table;
+}
+
+.post-left {
+  display: table-cell;
+  vertical-align: top;
+  width: 100px;
+}
+
+.post-right {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.calendar {
+  width: 72px;
+  position: relative;
+  background-color: #eee;
+
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+
+  -moz-box-shadow: 2px 2px 4px #666666;
+  -webkit-box-shadow: 2px 2px 4px #666666;
+  box-shadow: 2px 2px 4px #666666;
+  filter: progid:DXImageTransform.Microsoft.Shadow(strength = 1, direction = 135, color = '#666666');
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(strength = 1, Direction = 135, Color = '#666666')";
+}
+
+.calendar .month {
+  background-color: #d55;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  line-height: 16px;
+
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+
+  background: #ff4c4c;
+  background: -moz-linear-gradient(top,  #ff4c4c 0%, #af4646 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff4c4c), color-stop(100%,#af4646));
+  background: -webkit-linear-gradient(top,  #ff4c4c 0%,#af4646 100%);
+  background: -o-linear-gradient(top,  #ff4c4c 0%,#af4646 100%);
+  background: -ms-linear-gradient(top,  #ff4c4c 0%,#af4646 100%);
+  background: linear-gradient(to bottom,  #ff4c4c 0%,#af4646 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4c4c', endColorstr='#af4646',GradientType=0 );
+}
+
+.calendar .day {
+  text-align: center;
+  font-family: 'Happy Monkey', cursive;
+  font-size: 36px;
+  line-height: 56px;
+  padding-bottom: 6px;
+}
+
+.calendar .year {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 12px;
+  line-height: 12px;
+  position: absolute;
+  bottom: 2px;
+  right: 4px;
+}
+
+.tags {
+  margin-top: 14px;
+}
+
+.tags div {
+  line-height: 24px;
+}
+
+.tags a.tag {
+  font-size: 12px;
+  line-height: 16px;
+  background-color: #ffc;
+  color: #333;
+  padding: 2px 8px;
+
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.permalink {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 24px;
+  padding-left: 22px;
+  /* icon image width 21px, height 15 px */
+  background: url('data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABEAAAAMCAYAAACEJVa/AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAABOklE QVQ4T5XSySvEYRzH8bFEtoOlXDgpJZGLJbk6yMlS4kC5ulDuXN2UHFCWk5qLP0ApuSg5SPZsKWWXJWTJ+/1rZqhpik+9mp7v/OZ5nu/3N6F/pBzLeMMSKpEwORjGJhZQhzys4g6LOMYOahCXfMziA7fw1AM0oS3ymQ1vsYItFCOWAszgFdPwlF6c4hD1+J1meFhfsCK5mMMLppCJEhSiG++wjWiS0IEvDFnwB/PwwYnI2oThABvhLI4QTRX2cY9aC5NwxzFkWIjEQT7Caw9gEMYNbO8GrRbMAy5QFqx+0g8Hu4FSpKECu/D5diQjyB6e4LWjyUIXxvEMN3LoDvkSbpCKWCxcYw3VKMIo7NfvRuBMPnEGW0hBXHpwhXNsw1fnkP1P2EYDOmHLvpmEacE6TuDp6fhDQqFvUe9LSHC2wFMAAAAASUVORK5CYII=') no-repeat;
+}
+
+#right-vertical {
+  display: table-cell;
+  vertical-align: top;
+  width: 200px;
+  padding: 5px;
+}
+
+#right-vertical div {
+  color: #666;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 auto;
+}
+
+#right-vertical #name {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 6px;
+}
+
+#right-vertical #profile {
+  margin-bottom: 12px;
+}
+
+#right-vertical #disclaimer {
+  font-size: 10px;
+  line-height: 13px;
+  margin-bottom: 24px;
+}
+
+#right-vertical .iconlink {
+  margin-bottom: 6px;
+  margin-left: 10px;
+}
+
+.iconlink a {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  padding-left: 20px;
+}
+
+#archive {
+  background: url('data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADeAAAA3gB2VzOMgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADWSURBVDiNrdExSoNBEAXgbyWQxtJe8AzaausR9BpWegMvINhq7QEEwc4DBKtUaRQsLNIlAXEs3D+suvv7Iz54MLvz9vFmVkSoEdtYYtLSRIQNbSSMM5voMxiGRvwT3CAwxzV2a9qE82x0us6e0h7usZmvHrAfEe+FZq2Pz/c/Ulzm3huOK/3IbBpsYYbbxpiBGPXs5jWldIHHvh2mLgZ2cNAnLnCHpy87wFFR/8bD2ggzXA1M8NwVpcECLwMNVuXh30aY4GxggmlXlL+wqmubGH83+BM+ALg/xFcCs0wTAAAAAElFTkSuQmCC') no-repeat;
+}
+
+#rss {
+  background: url('data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADxgAAA8YBg9o/AQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFNSURBVDiNjdI/SNZRFMbxz2tFDjUIllOBOIiLoyA4CdFQuIbg3iJBQenUIoFLo3sEbilE4vYONgkaFiaIgdQSBIWIiPgHT0P3hePPn9KFw4Xnefjec+69DazgLnbwDU00I2Ldf64fiJpawUhEuKxg7wJAq1bRdxGggfvowC0MYRidlS738TgiZs/1X9PSFYzia003E3UjPMNzPEA3GsVoFO8oAU4xVgV8r5yylGfGIHaTf4T+DDitafUQU2gvoeGitfyPGTCPLZzUgJpoK8EnFW8sIuRZ2vG05lkn0+WuJf3TGUAC3cF6Ch5joHgPK/BeuI0Z/MZb9KCvvH0ruFwA1/An6S9hukJ9V8LjSTvBzaK/SfocbFQAB+Wkrop+rwBeJO1zG947uz5ExHFE/MJm0ofKvp20nqt4jet4hEW8SoEF/34k3Cj7T3xpBf4CNVQXtCyh/0EAAAAASUVORK5CYII=') no-repeat;
+}
+
+{block:IfShowGooglePlusLink}
+#google-plus {
+  background: url('data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAABZElEQVQ4jZ2SsUuWURTGf89JQfRTQTGcQlISsUUxgtYUE4eWNpdodHCIcHbyH9BGxUkEcfhWSwJBcDBCEINocHMS7Bsa0u7T0H3h40V50QtnuPec+zvnee4V0ArUuN+6BJiR5PsE0BGZdGR7wfac7RHbgzlGgb2ine1XkrbKY3QDo5LOJTkiPubzWUmNUscXEbHRPEEL8Csilmz35y7zwC5QBz4BE8CPQnNK6VTS57z/C0BErJb07eSCDxGxDjzO0Qb0Ne1VyHhbApxk8HKVhMLEbeB7QZN0DHTanqt6xxagA/ht+2VELADXKaU1SXXgUXNxRLy2/aQMmZH0NSLWgOlcuHLXfzBu+x0wAJBS2geuqsYHKABXwGFEDBae2J4ELqoAArqAp8CUpGfAH9uLwE9gSNIB8PCmy7ZrAM8lXZf0NYA3ue59lQc9wIMSvFPSJv89OauS0AuM3ZL/BrQDw7fkv/wDonac0A6jzpkAAAAASUVORK5CYII=') no-repeat;
+}
+{/block:IfShowGooglePlusLink}
+
+{block:IfShowFacebookLink}
+#facebook {
+  background: url('data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAA4kAAAOJAQo11HIAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAKRJREFUOE9jQAIqQOxAJAapRQEdQPyfRNwAxGAAMg2bAmIw2CUgJ2GTRMZngDgHiBOAeANUDIRBegkasAOIWYAYBkBOh8kRZYAFEIOAAhCD1C4AYpgcUQbAbL8CxOhyeA0AxQzIzzAQAsQkhQFYEgsgOgwodgEMw8ADIEaXGyQGEErKMIDNAFDaAAPkkEXHMIBuQA0QowBc2RkGQCkSJga1mYEBAJ8xplaOd1INAAAAAElFTkSuQmCC') no-repeat;
+}
+{/block:IfShowFacebookLink}
+
+{block:IfShowTwitterLink}
+#twitter {
+  background: url('data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QcCBTcKDEQ6CwAAAOdJREFUOMu10yFLw1EUBfCfytCJ4KKC4AximMVmNupgbck1s59CzGI0DuZnmNG4osUgikVwCFsRDBPB/8oT/oy356Z44YZ3uOfcc9+7jz/GzIR1B6hhAVdoYR47sI6zBPkI2Uje4wMbsBvAJtYiDgcRgQxPOIWtHPiKExSDQGUMOcN5GEMJnUjBHS4TAvvfNrfRTRTG8gt7MIv+L16vj5c80MDzFA46mMsLlNGbQqAes3UxIbmdmq2GhwT5BkujpAIWUcU1PseQb7Ec63oYusY27i3sw/FPn6mATaxiJZy74WIf8e6/YgjLa3dk7DyWagAAAABJRU5ErkJggg==') no-repeat;
+
+}
+{/block:IfShowTwitterLink}
+
+#right-vertical #tag-list-title, #right-vertical #latest-posts-title {
+  margin-top: 24px;
+  margin-bottom: 4px;
+}
+
+#tag-list {
+  list-style-image: url('data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABCElEQVR4XqXSQWqEMBQG4CYWBBdawZUguBAEFxJv0N6kcwNvNB6hR8gNJuJOEMYbGFwIgqYvwSltJu0QKvw83uJ9/EKe/vshOaqqusAgJkAI0cCoGWP8V6AsS6EWhCgcSOhFcxhAr13X3SFYjm3bZK5t277B/JC7FgKhRVEExgZ5notjpxCtwX2Tvu/5DyDLMgWYY0aGYeBfQJqmCrBFxnHkCkiS5ADsEQXEcXyG8W4rAMCe5bLvew0hABBLg6DbEkVRACK1RBr0fQvDMIAmD5Hj0TXTNJ2QTvq+ryHm43meTwoy6Z7n/fU7zbIs6tgMHHFdV2+iaq/rejt+HMdxAozxBSIgZ9PBJ7R3i2PR+hkSAAAAAElFTkSuQmCC');
+  margin: 0;
+  margin-left: 10px;
+  padding-left: 26px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#latest-posts {
+  margin: 0;
+  margin-top: 6px;
+  padding-left: 12px;
+}
+
+#latest-posts li {
+  margin-bottom: 6px;
+  list-style: none;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+{CustomCSS}
+
+    </style>
+
+    <script type="text/javascript"
+            src="http://static.tumblr.com/m232cil/aKRmp674r/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript">
+
+var originalHost = 'sudo-halt.com';
+var baseHostname = (location.host || originalHost);
+var apiKey = 'XENSQALRxDUTlA99VPC8keuwBgsKf0tFF0AA0OXss4OnJrxVEM';
+var POST_LIMIT = 20;
+var MAX_RECENT_POSTS = 10;
+
+function getRecentPosts() {
+  var tagsOccurence = {};
+  var offset = 0;
+
+  // Use AJAX call to get and analyze recent posts.
+  $.getJSON(
+    'http://api.tumblr.com/v2/blog/' + baseHostname + '/posts?api_key=' +
+    apiKey + '&limit=' + POST_LIMIT + '&callback=?',
+    function(data) {
+      var recentPostList = $('#latest-posts');
+      $.each(data['response']['posts'], function(index) {
+        // Fill up to MAX_RECENT_POSTS recent posts.
+        if (index < MAX_RECENT_POSTS) {
+          title = (this.title || this.caption || this.text || this.question ||
+                   '(' + this.type + ')');
+          recentPostList.append('<li><a href="' + this.post_url + '">' +
+              title.replace(/<\/?[^>]+>/gi, "") + '</a></li>');
+        }
+        // Add tag occurence in all posts.
+        $.each(this.tags, function() {
+          if (this in tagsOccurence) {
+            tagsOccurence[this]++;
+          } else {
+            tagsOccurence[this] = 1;
+          }
+        });
+      });
+
+      // Sort tags by occurence order from recent POST_LIMIT posts.
+      sortedTagNames = [];
+      for (var key in tagsOccurence) {
+        sortedTagNames.push(key);
+      }
+      sortedTagNames.sort(function(a, b) {
+        return tagsOccurence[b] - tagsOccurence[a];
+      });
+
+      // Fill tag list.
+      var tagList = $('#tag-list');
+      $.each(sortedTagNames, function() {
+        tagList.append(
+            '<li><a href="/tagged/' + encodeURI(this.replace(' ', '-')) +
+            '">' + this + '</a></li>');
+      });
+    });
+}
+
+$(function() {
+  getRecentPosts();
+});
+
+    </script>
+  </head>
+
+  <body>
+    <div id="main-container">
+      <!-- Header -->
+      <div id="header">
+        <h1 class="title-font"><a href="/">{Title}</a></h1>
+
+        {block:Description}
+          <div class="italic">{Description}</div>
+        {/block:Description}
+      </div><!-- #header -->
+
+      <div id="navbar" class="separator">
+        {block:IndexPage}
+          <div class="prevnext">
+            {block:PreviousPage}<a href="{PreviousPage}">{/block:PreviousPage}
+            &#171; {lang:Previous page}
+            {block:PreviousPage}</a>{/block:PreviousPage}
+
+            <span class="prevnext-separator">|</span>
+
+            {block:NextPage}<a href="{NextPage}">{/block:NextPage}
+            {lang:Next page} &#187;
+            {block:NextPage}</a>{/block:NextPage}
+          </div><!-- .prevnext -->
+        {/block:IndexPage}
+      </div>
+
+      <div id="main-contents-container">
+        <div id="main-contents">
+          <!-- Blog posts -->
+          <div id="posts">
+            {block:Posts}
+              <div class="single-post">
+                <div class="post-left">
+                  <div class="calendar">
+                    <div class="month">{ShortMonth}</div>
+                    <div class="day">{DayOfMonth}</div>
+                    <div class="year">{Year}</div>
+                  </div><!-- .calendar -->
+                  {block:HasTags}
+                    <div class="tags">
+                      {block:Tags}
+                        <div><a href="{TagURL}" class="noline tag">{Tag}</a></div>
+                      {/block:Tags}
+                    </div><!-- .tags -->
+                  {/block:HasTags}
+                  <a href="{Permalink}" class="permalink">{lang:Permalink}</a>
+                </div><!-- .post-left -->
+
+                <div class="post-right">
+                  {block:Text}
+                    <div class="post text">
+                      {block:Title}
+                        <h3><a href="{Permalink}">{Title}</a></h3>
+                      {/block:Title}
+
+                      {Body}
+                    </div>
+                  {/block:Text}
+
+                  {block:Photo}
+                    <div class="post photo">
+                      {LinkOpenTag}
+                        <img src="{PhotoURL-500}" alt="{PhotoAlt}" />
+                      {LinkCloseTag}
+
+                      {block:Caption}
+                        <div class="caption">{Caption}</div>
+                      {/block:Caption}
+                    </div>
+                  {/block:Photo}
+
+                  {block:Panorama}
+                    <div class="post panorama">
+                      {LinkOpenTag}
+                        <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />
+                      {LinkCloseTag}
+
+                      {block:Caption}
+                        <div class="caption">{Caption}</div>
+                      {/block:Caption}
+                    </div>
+                  {/block:Panorama}
+
+                  {block:Photoset}
+                    <div class="post photoset">
+                      {Photoset-500}
+
+                      {block:Caption}
+                        <div class="caption">{Caption}</div>
+                      {/block:Caption}
+                    </div>
+                  {/block:Photoset}
+
+                  {block:Quote}
+                    <div class="post quote">
+                      "{Quote}"
+
+                      {block:Source}
+                        <div class="source">{Source}</div>
+                      {/block:Source}
+                    </div>
+                  {/block:Quote}
+
+                  {block:Link}
+                    <div class="post link">
+                      <h3><a href="{URL}" class="link" {Target}>{Name}</a></h3>
+
+                      {block:Description}
+                        <div class="description">{Description}</div>
+                      {/block:Description}
+                    </div>
+                  {/block:Link}
+
+                  {block:Chat}
+                    <div class="post chat">
+                      {block:Title}
+                        <h3><a href="{Permalink}">{Title}</a></h3>
+                      {/block:Title}
+
+                      <ul class="chat">
+                        {block:Lines}
+                          <li class="{Alt} user_{UserNumber}">
+                            {block:Label}
+                              <span class="label">{Label}</span>
+                            {/block:Label}
+
+                            {Line}
+                          </li>
+                        {/block:Lines}
+                      </ul>
+                    </div>
+                  {/block:Chat}
+
+                  {block:Video}
+                    <div class="post video">
+                      {Video-500}
+
+                      {block:Caption}
+                        <div class="caption">{Caption}</div>
+                      {/block:Caption}
+                    </div>
+                  {/block:Video}
+
+                  {block:Audio}
+                    <div class="post audio">
+                      {AudioPlayerBlack}
+
+                      {block:Caption}
+                        <div class="caption">{Caption}</div>
+                      {/block:Caption}
+                    </div>
+                  {/block:Audio}
+                </div><!-- .post-right -->
+              </div><!-- .single-post -->
+              <div class="post-separator"></div>
+            {/block:Posts}
+          </div><!-- #posts -->
+
+          <div id="right-vertical">
+            <div><img src="{PortraitURL-64}" /></div>
+            <div id="name">{Title}</div>
+            <div id="profile">{text:Profile}</div>
+            <div id="disclaimer">{text:Disclaimer}</div>
+            <div class="iconlink"><a href="/archive" id="archive">{lang:Archive}</a></div>
+            <div class="iconlink"><a href="{RSS}" id="rss">{lang:RSS feed}</a></div>
+
+            {block:IfShowGooglePlusLink}
+              <div class="iconlink">
+                <a href="https://plus.google.com/{text:GooglePlusId}" id="google-plus">
+                    Google+</a>
+              </div>
+            {/block:IfShowGooglePlusLink}
+
+            {block:IfShowFacebookLink}
+              <div class="iconlink">
+                <a href="http://www.facebook.com/{text:FacebookId}" id="facebook">
+                    Facebook</a>
+              </div>
+            {/block:IfShowFacebookLink}
+
+            {block:IfShowTwitterLink}
+              <div class="iconlink">
+                <a href="http://twitter.com/{text:TwitterAccount}" id="twitter">
+                    Twitter (@{text:TwitterAccount})</a>
+              </div>
+            {/block:IfShowTwitterLink}
+
+            <!-- Tag list -->
+            <div id="tag-list-title">{text:TagList}</div>
+            <!-- Placeholder.  Will be filled by JavaScript -->
+            <ul id="tag-list"></ul>
+
+            <!-- Latest posts -->
+            <div id="latest-posts-title">{text:RecentPosts}</div>
+            <!-- Placeholder.  Will be filled by JavaScript -->
+            <ul id="latest-posts"></ul>
+          </div><!-- #right-vertical -->
+        </div><!-- #main-contents -->
+      </div><!-- #main-contents-container -->
+
+      <div id="footbar" class="separator">
+        {block:IndexPage}
+          <div class="prevnext">
+            {block:PreviousPage}<a href="{PreviousPage}">{/block:PreviousPage}
+            &#171; {lang:Previous page}
+            {block:PreviousPage}</a>{/block:PreviousPage}
+
+            <span class="prevnext-separator">|</span>
+
+            {block:NextPage}<a href="{NextPage}">{/block:NextPage}
+            {lang:Next page} &#187;
+            {block:NextPage}</a>{/block:NextPage}
+          </div><!-- .prevnext -->
+        {/block:IndexPage}
+
+        <div id="theme-credit" class="italic">
+          Theme powered by
+          <a href="http://sudo-halt.com/" class="title-font noline">
+            sudo halt
+          </a>
+        </div>
+      </div>
+    </div><!-- #main-container -->
+  </body>
+</html>
