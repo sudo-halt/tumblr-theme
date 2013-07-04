@@ -26,25 +26,11 @@
   and is licensed under terms shown in
   http://webtreats.mysitemyway.com/terms-of-use/
 
-  Archive icon and RSS icon are created by sudo halt, and its license
-  follows the same license as the Tumblr theme.
+  Permalink (icon), archive, RSS and tag icons are created by sudo halt,
+  and their usage follow the same license as this Tumblr theme.
 
-  Permalink icon (chain icon) is downloaded from
-  http://www.iconfinder.com/icondetails/62913/40/chain_link_seo_tags_icon
-  and resized
-
-  Tag icon is downloaded from
-  http://www.iconfinder.com/icondetails/42365/16/tag_icon
-
-  Google+ icon is downloaded from
-  http://www.iconfinder.com/icondetails/107104/16/black_google_square_icon
-
-  Facebook icon is downloaded from
-  http://findicons.com/icon/456584/facebook_alt?id=456747#
-  and resized to 16x16
-
-  Twitter icon is downloaded from its official logo site, recolored and resized.
-  https://twitter.com/logo
+  Google+, Facebook and Twitter icons are downloaded from corresponding
+  official sites, made monochrome and resized.
 -->
 <html>
   <head>
@@ -68,8 +54,8 @@
     <meta name="text:GooglePlusId" content="" />
     <meta name="text:FacebookId" content="" />
     <meta name="text:TwitterAccount" content="" />
-    <meta name="text:TagList" content="タグ一覧" />
-    <meta name="text:RecentPosts" content="最近の投稿" />
+    <meta name="text:TagList" content="Tag List" />
+    <meta name="text:RecentPosts" content="Recent Posts" />
 
     <meta name="color:BodyTextColor" content="#000" />
     <meta name="color:SeparatorColor" content="#333" />
@@ -334,7 +320,7 @@ blockquote+p {
   line-height: 24px;
   padding-left: 22px;
   /* icon image width 21px, height 15 px */
-  background: url('data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABEAAAAMCAYAAACEJVa/AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAABOklE QVQ4T5XSySvEYRzH8bFEtoOlXDgpJZGLJbk6yMlS4kC5ulDuXN2UHFCWk5qLP0ApuSg5SPZsKWWXJWTJ+/1rZqhpik+9mp7v/OZ5nu/3N6F/pBzLeMMSKpEwORjGJhZQhzys4g6LOMYOahCXfMziA7fw1AM0oS3ymQ1vsYItFCOWAszgFdPwlF6c4hD1+J1meFhfsCK5mMMLppCJEhSiG++wjWiS0IEvDFnwB/PwwYnI2oThABvhLI4QTRX2cY9aC5NwxzFkWIjEQT7Caw9gEMYNbO8GrRbMAy5QFqx+0g8Hu4FSpKECu/D5diQjyB6e4LWjyUIXxvEMN3LoDvkSbpCKWCxcYw3VKMIo7NfvRuBMPnEGW0hBXHpwhXNsw1fnkP1P2EYDOmHLvpmEacE6TuDp6fhDQqFvUe9LSHC2wFMAAAAASUVORK5CYII=') no-repeat;
+  background: url('data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABIAAAAMCAYAAABvEu28AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABFwAAARcBVoDBkgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALKSURBVCiRbZNPSBt5HMVfxkyCGKMuKgQC/rm4h4X4BwcRIULr0YMLkS0LnhRdiHjxICx4WVrYBQtCobc6QqHk5LUqtiUXO8hulKAHi7gzZn4zvxiyTmnTOsl3vnuy0NIH7/Z4l/d5IWbGd9Tied5vtVptjog6mfldW1vbn/F43HZdd56Z7wMwEonEMwB5AAAzf+Wbm5uMZVlX2Wz2c3d3NwGg8fFxury89A8ODm6mp6cbsViM0uk0HR4elj3P+5WZvyr6UQjxdmtrq9re3k4AqL+/n3RdDwzD4HQ6zYqisKIolEqlCAA1NzfT8fGxZOYUmBme5z0oFotyaGjoS2Bzc/O967r++vq6H41GGQBPTEzw2dnZRyHEa8Mwyk1NTaRpGgkhduH7vnZ6eipbWloIAGUyGf/q6sqVUkpN0xoAKJlMBrlcjnd2dgIpZZGZIaX8a25u7hYAWZZloVQq/dPT00ORSITy+XzFtu3n5XL5ycLCwicAtLy8/N5xnM/z8/NBZ2cnCSGKzIzb29vfFxcXfQBkmqaAaZr/AQhWV1fr1Wo1x8ywLOtNX18fzc7OBkKIejab9QEEKysrdc/znjqO82J/f78cj8cplUqRaZqvUCqVSFEUzmQyXKlUjpkZlUrF2tvb4+3tbU4kEgyAR0dHWQhBlmXJmZkZHwC1trbS0dFRtV6v34Nt2/9OTU2xqqpcKBTIcZwPJycnwcjICANgVVV5bW2NhRDBxsbGh2g0SgBocHCQzs/Pped5D+7m/7lQKFA4HOZQKMQDAwMMgBVF4cnJSTYMg3Vd597eXgJAHR0dpOt6RUr5NzP/dIcPmBmu677M5/PB8PAwx2IxHhsb493d3eDi4iLQNO0LEktLSx9t27Zqtdov34IcurtIo9FYEkL8oapqnIiuk8nko0aj8e76+vqx7/s/RCKRT+FwONfV1fUQQO3bT/0PjYjnyHSooaIAAAAASUVORK5CYII=') no-repeat;
 }
 
 #right-vertical {
@@ -389,13 +375,13 @@ blockquote+p {
 
 {block:IfShowGooglePlusLink}
 #google-plus {
-  background: url('data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAABZElEQVQ4jZ2SsUuWURTGf89JQfRTQTGcQlISsUUxgtYUE4eWNpdodHCIcHbyH9BGxUkEcfhWSwJBcDBCEINocHMS7Bsa0u7T0H3h40V50QtnuPec+zvnee4V0ArUuN+6BJiR5PsE0BGZdGR7wfac7RHbgzlGgb2ine1XkrbKY3QDo5LOJTkiPubzWUmNUscXEbHRPEEL8Csilmz35y7zwC5QBz4BE8CPQnNK6VTS57z/C0BErJb07eSCDxGxDjzO0Qb0Ne1VyHhbApxk8HKVhMLEbeB7QZN0DHTanqt6xxagA/ht+2VELADXKaU1SXXgUXNxRLy2/aQMmZH0NSLWgOlcuHLXfzBu+x0wAJBS2geuqsYHKABXwGFEDBae2J4ELqoAArqAp8CUpGfAH9uLwE9gSNIB8PCmy7ZrAM8lXZf0NYA3ue59lQc9wIMSvFPSJv89OauS0AuM3ZL/BrQDw7fkv/wDonac0A6jzpkAAAAASUVORK5CYII=') no-repeat;
+  background: url('data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAABlUlEQVQoz1WRO0hbcRTGv/O/18eNsRof0cEEbR5UUJAoioPY4iQiVsTBRQcLQqV00K1byVBH0UEEHZzExQcuLjroZktLuSQODaKUUokOijFek5vPIWiu31nOC77D7wgIaJf1m03HkcTHc6+94dkO7s9ZjXgWDfNbl29ebHUXiF687p2UDOgIsds/0a8sEFQPC5HzgPvQuaAkFToFIACQK1rq9926zuCQgmQ0W5V9z5fJFsDy5nPJL+TcvzrT0roKAoD390TbbScAlJmxkEoDAFWq+Us83DXl2Q1Eu6f0ZN7bFVtp0+6FAgLIKUuzZoc+/Asf25WA8eNuMOb22EmNQOHe6T7WB6PqBlQpI16zu97q/mnEAYLCyr2muYl+VrFh+L3+HwRd5klQpUFItm7t6E34a0lCWPz381v6342DoEobMbFB1K2xwTCfbCTTM8kK/dqBajkyNoBsoVFqslq/cZC8VzN/ipIFcvrVSG+23IGyepO1sz1VWyoLgp6dwdHixItnga8OpvsSQfpPQosdvgXhizEfAcbOxx5E3wNbAAAAAElFTkSuQmCC') no-repeat;
 }
 {/block:IfShowGooglePlusLink}
 
 {block:IfShowFacebookLink}
 #facebook {
-  background: url('data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAA4kAAAOJAQo11HIAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAKRJREFUOE9jQAIqQOxAJAapRQEdQPyfRNwAxGAAMg2bAmIw2CUgJ2GTRMZngDgHiBOAeANUDIRBegkasAOIWYAYBkBOh8kRZYAFEIOAAhCD1C4AYpgcUQbAbL8CxOhyeA0AxQzIzzAQAsQkhQFYEgsgOgwodgEMw8ADIEaXGyQGEErKMIDNAFDaAAPkkEXHMIBuQA0QowBc2RkGQCkSJga1mYEBAJ8xplaOd1INAAAAAElFTkSuQmCC') no-repeat;
+  background: url('data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA0UlEQVQ4y83RvWoCURAF4G+NqKQKgiCBkCIghPTpQjp9ihS+hFXeRYJ5jTS2lpZJoylDSIoU/qCb5i4sF3QXbRwY5sCce+bMXJghPTBnSQBlYxlqFWcZKBPfeMM71ujhPhMpsrlEPxJ8xgJpGQcfGKKBR1zjIZtexsFr4N1gHBytsv4uBymS6HB1XKKWJ+77hRdMMA2TL9DFOQa4LVrhac9dxkUrQBsd/OArWG/hCs143zi3OTwKvDt8xtzKjulJDv+FusFvTKw4Mk5DYH7E+/k/ChdWCkASZf0AAAAASUVORK5CYII=') no-repeat;
 }
 {/block:IfShowFacebookLink}
 
@@ -412,7 +398,7 @@ blockquote+p {
 }
 
 #tag-list {
-  list-style-image: url('data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABCElEQVR4XqXSQWqEMBQG4CYWBBdawZUguBAEFxJv0N6kcwNvNB6hR8gNJuJOEMYbGFwIgqYvwSltJu0QKvw83uJ9/EKe/vshOaqqusAgJkAI0cCoGWP8V6AsS6EWhCgcSOhFcxhAr13X3SFYjm3bZK5t277B/JC7FgKhRVEExgZ5notjpxCtwX2Tvu/5DyDLMgWYY0aGYeBfQJqmCrBFxnHkCkiS5ADsEQXEcXyG8W4rAMCe5bLvew0hABBLg6DbEkVRACK1RBr0fQvDMIAmD5Hj0TXTNJ2QTvq+ryHm43meTwoy6Z7n/fU7zbIs6tgMHHFdV2+iaq/rejt+HMdxAozxBSIgZ9PBJ7R3i2PR+hkSAAAAAElFTkSuQmCC');
+  list-style-image: url('data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAB1gAAAdYBXtXqjAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADWSURBVDiNlZIxDoMwDEWf286VmBi5AzfgSEwMnRhyK47Q47BQJXGHkoqCk7aWLEWJ//NPYgBfyAcwqCq5JBV3XRfGcYxN0yRxBHRdZyEAvqoqP8+zeu91mqa4EevGjQk5AYQQiDECsCyLAMIxnIgMxv6rQ9u2oe/7WNd16rx3YDphcxB3whzgA8IXcQ7whlxW8dm625dwIsKZ1193BQeluKd7DAWruXSqyvY1/4G4t273Jb9A3IfGGM0SxB3qM/NtQQ7iLMCAmGJVRdI0WbHO/lVVb7maJ7Z6YAwC/YMBAAAAAElFTkSuQmCC');
   margin: 0;
   margin-left: 10px;
   padding-left: 26px;
@@ -659,7 +645,6 @@ $(function() {
               <div class="post-separator"></div>
             {/block:Posts}
           </div><!-- #posts -->
-
           <div id="right-vertical">
             <div><img src="{PortraitURL-64}" /></div>
             <div id="name">{Title}</div>
