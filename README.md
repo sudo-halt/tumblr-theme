@@ -55,3 +55,8 @@ Tumblr のサーバーにアップロードして使用できます。
 
 英語など、日本語以外の言語にしたい場合に右側のペインに表示されるタイトルを
 変更できます。
+
+#### Google Analytics
+
+* Google Analytics を使用するかどうか
+* Google Analytics のサイトID ("UA-"で始まるID)
