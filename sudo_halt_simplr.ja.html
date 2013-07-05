@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <!--
   This Tumblr theme license follows Apache License 2.0 unless specified
   as separate notes.
@@ -46,6 +45,7 @@
     <meta name="if:Show Google Plus Link" content="1" />
     <meta name="if:Show Facebook Link" content="1" />
     <meta name="if:Show Twitter Link" content="1" />
+    <meta name="if:Use Google Analytics" content="0" />
 
     <meta name="text:BackgroundImageURL"
           content="http://static.tumblr.com/m232cil/SFGmpcna9/webtreats_baby_blue_pattern_52.jpg" />
@@ -56,9 +56,23 @@
     <meta name="text:TwitterAccount" content="" />
     <meta name="text:TagList" content="Tag List" />
     <meta name="text:RecentPosts" content="Recent Posts" />
+    <meta name="text:GoogleAnalyticsId" content="UA-xxxxxxxx" />
 
     <meta name="color:BodyTextColor" content="#000" />
     <meta name="color:SeparatorColor" content="#333" />
+
+    {block:IfUseGoogleAnalytics}
+      <!-- Google Analytics -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '{text:GoogleAnalyticsId}', location.hostname);
+        ga('send', 'pageview');
+      </script>
+    {/block:IfUseGoogleAnalytics}
 
     <style type="text/css">
 
@@ -449,7 +463,7 @@ function getRecentPosts() {
           title = (this.title || this.caption || this.text || this.question ||
                    '(' + this.type + ')');
           recentPostList.append('<li><a href="' + this.post_url + '">' +
-              title.replace(/<\/?[^>]+>/gi, "") + '</a></li>');
+              title.replace(/<\/?[^>]+>/gi, "") + '<\/a><\/li>');
         }
         // Add tag occurence in all posts.
         $.each(this.tags, function() {
@@ -475,7 +489,7 @@ function getRecentPosts() {
       $.each(sortedTagNames, function() {
         tagList.append(
             '<li><a href="/tagged/' + encodeURI(this.replace(' ', '-')) +
-            '">' + this + '</a></li>');
+            '">' + this + '<\/a><\/li>');
       });
     });
 }
